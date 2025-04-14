@@ -32,7 +32,7 @@
         <!-- Page Content -->
         <main>
             @session('success')
-                <div class="success-messsage">{{ session('success') }}</div>
+                <div class="success-message">{{ session('success') }}</div>
             @endsession
 
             {{ $slot }}
