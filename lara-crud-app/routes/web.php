@@ -9,7 +9,9 @@ Route::get('/', function () {
 });
 
 // Resource Routes
-Route::resource('blog', BlogController::class);
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::resource('blog', BlogController::class);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

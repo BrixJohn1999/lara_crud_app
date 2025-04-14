@@ -19,3 +19,5 @@
 `php artisan make:controller BlogController --resource`
 
 `php artisan route:list`
+
+https://youtu.be/TllUuRhcWDI?list=LL&t=3371

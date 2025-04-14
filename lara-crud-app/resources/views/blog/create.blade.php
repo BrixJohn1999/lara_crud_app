@@ -1,9 +1,10 @@
-<body>
+<x-app-layout>
+
     <div class="container mx-auto px-4 py-8">
         <!-- Page Heading -->
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-2xl font-bold text-gray-800">Create New Blog</h2>
-            <a href="#"
+            <a href="{{ route('blog.index') }}"
                 class="px-4 py-2 bg-gray-600 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-gray-700 transition">
                 ← Back to Blogs
             </a>
@@ -11,13 +12,17 @@
 
         <!-- Form Container -->
         <div class="bg-white shadow-lg rounded-lg p-6 max-w-2xl mx-auto">
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="{{ route('blog.store') }}" method="post" enctype="multipart/form-data">
+                @csrf
                 <!-- Title Field -->
                 <div class="mb-4">
                     <label for="title" class="block text-sm font-medium text-gray-700">Title:</label>
-                    <input type="text" id="title" name="title" value="Sample Blog Title"
+                    <input type="text" id="title" name="title" value=""
                         class="mt-1 p-3 w-full border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-200"
                         placeholder="Enter title">
+                    @error('title')
+                        <div class="error">{{ $message }}</div>
+                    @enderror()
                 </div>
 
                 <!-- Description Field -->
@@ -25,7 +30,10 @@
                     <label for="description" class="block text-sm font-medium text-gray-700">Description:</label>
                     <textarea id="description" name="description" rows="4"
                         class="mt-1 p-3 w-full border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-200"
-                        placeholder="Enter description">This is a sample blog description.</textarea>
+                        placeholder="Enter description"></textarea>
+                    @error('description')
+                        <div class="error">{{ $message }}</div>
+                    @enderror()
                 </div>
 
                 <!-- Banner Image Upload -->
@@ -45,4 +53,5 @@
             </form>
         </div>
     </div>
-</body>
+
+</x-app-layout>

@@ -28,11 +28,11 @@
                         <td class="px-4 py-3 text-gray-700">This is a short description of the blog...</td>
                         <td class="px-4 py-3 text-gray-600">01 Mar, 2025</td>
                         <td class="px-4 py-3 flex justify-center space-x-2">
-                            <a href="#"
+                            <a href=""
                                 class="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded shadow-md hover:bg-blue-600 transition">
                                 👁 View
                             </a>
-                            <a href="#"
+                            <a href=""
                                 class="px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded shadow-md hover:bg-yellow-600 transition">
                                 ✏️ Edit
                             </a>
