@@ -41,6 +41,9 @@
                     <label for="banner_image" class="block text-sm font-medium text-gray-700">Banner Image:</label>
                     <input type="file" id="banner_image" name="banner_image"
                         class="mt-1 p-2 w-full border border-gray-300 rounded-lg shadow-sm focus:ring focus:ring-blue-200">
+                    @error('banner_image')
+                        <div class="error">{{ $message }}</div>
+                    @enderror()
                 </div>
 
                 <!-- Submit Button -->

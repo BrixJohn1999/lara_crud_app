@@ -12,7 +12,14 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blog.index');
+
+        //Display BLogs data from database
+        $blogs = Blog::where('user_id', request()->user()->id)
+            ->orderBy('id', 'DESC')
+            ->paginate(5);
+        return view('blog.index', [
+            'blogs' => $blogs
+        ]);
     }
 
     /**
@@ -54,7 +61,7 @@ class BlogController extends Controller
      */
     public function show(string $id)
     {
-        // return view('blog.show');
+        return view('blog.show');
     }
 
     /**
@@ -62,7 +69,7 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('blog.edit');
     }
 
     /**

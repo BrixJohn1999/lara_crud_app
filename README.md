@@ -20,4 +20,4 @@
 
 `php artisan route:list`
 
-https://youtu.be/TllUuRhcWDI?list=LL&t=3371
+https://youtu.be/TllUuRhcWDI?list=LL&t=4406
