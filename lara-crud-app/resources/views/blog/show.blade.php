@@ -37,7 +37,7 @@
 
             <!-- Action Buttons -->
             <div class="flex justify-end space-x-4 mt-6">
-                <a href="#"
+                <a href="{{ route('blog.edit', $blog) }}"
                     class="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg shadow-md hover:bg-blue-700 transition">
                     ✏️ Edit Blog
                 </a>

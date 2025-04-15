@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -79,9 +80,21 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Blog  $blog)
     {
-        //
+        $data = $request->validate([
+            'title' => 'required|string',
+            'description' => 'required|string',
+        ]);
+
+        if ($request->hasFile('banner_image')) {
+            if ($blog->banner_image) {
+                Storage::disk('public')->delete($blog->banner_image);
+            }
+            $data['banner_image'] = $request->file('banner_image')->store('blogs', 'public');
+        }
+        $blog->update($data);
+        return to_route('blog.show', $blog)->with('success', ' Blog updated Sucessfully');
     }
 
     /**
