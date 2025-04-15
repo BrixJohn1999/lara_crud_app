@@ -18,6 +18,10 @@
 
 `php artisan make:controller BlogController --resource`
 
+## List all routes GET/POST/PUT
+
 `php artisan route:list`
 
-https://youtu.be/TllUuRhcWDI?list=LL&t=4406
+## add public asset to public folder
+
+`php artisan storage:link`

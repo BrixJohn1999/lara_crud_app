@@ -34,7 +34,7 @@
                                     class="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded shadow-md hover:bg-blue-600 transition">
                                     👁 View
                                 </a>
-                                <a href="{{ route('blog.edit'), $blog->id }}"
+                                <a href="{{ route('blog.edit', $blog), $blog->id }}"
                                     class="px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded shadow-md hover:bg-yellow-600 transition">
                                     ✏️ Edit
                                 </a>
