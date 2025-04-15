@@ -25,3 +25,11 @@
 ## add public asset to public folder
 
 `php artisan storage:link`
+
+## TO FIX No Application Encryption Key Has Been Specified
+
+`php artisan key:generate`
+
+## after cloning to create vendor folder
+
+`composer install`
