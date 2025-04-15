@@ -190,7 +190,7 @@ textarea {
     margin-bottom: 20px;
 }
 
-button {
+.button {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -201,8 +201,8 @@ button {
     margin-right: 10px;
 }
 
-button.form-btn {
-    background-color: #007bff !important;
+.button.form-btn {
+    background-color: #007bff;
 }
 
 table {

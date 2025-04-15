@@ -38,10 +38,14 @@
                                     class="px-3 py-1 bg-yellow-500 text-white text-xs font-semibold rounded shadow-md hover:bg-yellow-600 transition">
                                     ✏️ Edit
                                 </a>
-                                <button onclick="return confirm('Are you sure you want to delete this blog?')"
-                                    class="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded shadow-md hover:bg-red-600 transition">
-                                    🗑 Delete
-                                </button>
+                                <form method="POST" action="{{ route('blog.destroy', $blog) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button onclick="return confirm('Are you sure you want to delete this blog?')"
+                                        class="px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded shadow-md hover:bg-red-600 transition">
+                                        🗑 Delete
+                                    </button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
